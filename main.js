@@ -17,30 +17,26 @@ function getIndex3(arr){
 }
 
 function isLongList(arr){
-  if(arr.length > 10){
-  return true}
-  else if(arr.length === 10){
-    return true
+  if(arr.length >= 10){
+  return true
   }else if(arr.length < 10){
     return false
   }
 }
 
 function firstItemIsNumber(arr){
-  if(arr[0] >= 0 || arr[0] < 0){
+  if(typeof arr[0] === 'number'){
     return true
-  } else if(typeof arr[0] === 'string'){
+  }else if(typeof arr[0] === 'string'){
     return false
-  } else if(arr[0] === true || arr[0] === false)
+  } else if(typeof arr[0] === 'boolean'){
   return false
-
+  } else if(typeof arr[0] === 'object'){
+    return false
+  } else if (typeof arr[0] === 'function'){
+  return  false;
+  }
 }
-
-function secondCharOfThirdString(arr){
-  
-}
-
-
 
 
  /********************************************
